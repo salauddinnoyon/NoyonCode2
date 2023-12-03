@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+        stages{
+            stage('chekout'){
+                
+                steps{
+                    git branch: 'salauddin', url: 'https://github.com/salauddinnoyon/NoyonCode2.git'
+            
+                }
+                
+                
+                
+            }
+            stage('build'){
+                
+                steps{
+                    sh 'mvn test'
+                }
+                
+            }
+        }
+    
+}
